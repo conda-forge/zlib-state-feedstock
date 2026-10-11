@@ -18,7 +18,7 @@ source:
     - patches/0002-fix-windows-dll-directory-fallback.patch
 
 build:
-  number: 0
+  number: 1
   script:
     - if: win
       then:
@@ -42,7 +42,7 @@ requirements:
 tests:
   - python:
       imports:
-      - zlib_state
+        - zlib_state
       pip_check: true
 
 about:
