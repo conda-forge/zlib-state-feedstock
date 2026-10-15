@@ -1,5 +1,5 @@
 context:
-  version: "0.1.12"
+  version: "0.1.13"
 
 package:
   name: zlib-state
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/z/zlib-state/zlib_state-${{ version }}.tar.gz
-  sha256: ccbb06321daf165b022aa4d22d62effb7df76f55035d50bbe8b93696db416cf0
+  sha256: bcc062d5355dd171bd07c9a987ce1bd8af19decd9f640b374cf7860440346660
   patches:
     # Upstream hardcodes an absolute Windows include path ("C:/Program Files/zlib/include/zlib.h")
     # instead of using the system include search path, so zlib.h is never found in a conda env.
@@ -42,7 +42,7 @@ requirements:
 tests:
   - python:
       imports:
-      - zlib_state
+        - zlib_state
       pip_check: true
 
 about:
